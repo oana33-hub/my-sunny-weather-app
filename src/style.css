@@ -1,0 +1,75 @@
+.card-body {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 6px 6px 10px;
+  padding: 23px;
+  margin: 40px auto;
+  max-width: 850px;
+  background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+}
+.button {
+  border-radius: 10px;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.search-form {
+  border-radius: 10px;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+}
+
+h2 {
+  color: #fff;
+  text-align: center;
+}
+
+h3 {
+  color: #fff;
+  text-align: center;
+}
+
+li {
+  list-style: none;
+  display: inline;
+  font-size: 24px;
+  color: #fff;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+p {
+  color: #fff;
+  font-size: 24px;
+}
+
+h4 {
+  color: #fff;
+}
+
+img {
+  margin: auto;
+  display: block;
+}
+
+.box {
+  border: 1px solid #fff;
+  font-size: 24px;
+  padding: 20px 30px;
+  display: block;
+  margin: 40px 0;
+  text-align: center;
+  color: #fff;
+  border-radius: 20px;
+}
+
+.container {
+  display: inline-block;
+}
