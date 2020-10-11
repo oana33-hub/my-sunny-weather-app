@@ -69,6 +69,11 @@ img {
   color: #fff;
   border-radius: 20px;
 }
+footer{
+  text-align: center;
+  font-size: 20px;
+  font-style: italic;
+}
 
 .container {
   display: inline-block;
