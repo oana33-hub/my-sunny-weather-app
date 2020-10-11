@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WeatherApp</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="src/style.css">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="card-body">
+      <form id="search-form">
+        <input type="search" placeholder="Search a city" autofocus="on" autocomplete="off" id="city-input"
+          class="search-form" />
+
+
+        <input type="submit" value="search" class="btn btn-warning " id="search-city" />
+
+
+        <button type="button" class="btn btn-warning " id="current-location-button">
+          Current
+        </button>
+      </form>
+      <div class="searching">
+        <h4></h4>
+      </div>
+      <div class="city">
+        <h1>
+          PARIS
+        </h1>
+      </div>
+      <div class="date-time">
+        <h3>
+        </h3>
+      </div>
+      <br />
+
+      <h2 class="temperature">
+        <span class="temperature" id="temperature">
+
+        </span>
+        <span class="units">
+          <a href="#" id="celsius-link">°C</a>|
+          <a href="#" id="fahrenheit-link">°F</a> </span>
+      </h2>
+      <div class="description">
+        <p>
+          description: <span class="description" id="description"></span>
+          </br>
+          wind:<span class="wind" id="wind"></span>km/h
+          </br>
+          humidity: <span class="humidity" id="humidity"></span> % </p>
+      </div>
+      <div class="img">
+        <img src="http://clipart-library.com/img1/798806.png" />
+      </div>
+      <div class="daily-weather">
+        <h4>Daily Weather</h4>
+        <ul>
+          <li>
+            MON
+            ☀️23°C
+          </li>
+          <li>
+            TUE
+            ⛅21°C
+          </li>
+          <li>
+            WED
+            ☀️ 27°C
+          </li>
+          <li>
+            THU
+            ☀️ 32°C
+          </li>
+          <li>
+            FRI
+            ☀️30°
+          </li>
+        </ul>
+      </div>
+      <div class="box">
+        MILANO 29°C
+        ☀️
+        ZURICH 25°C
+        ☀️
+        BERLIN 19°C
+        ⛅
+
+      </div>
+    </div>
+  </div>
+  <script src="src/index.js"></script>
+
+
+</body>
+
+</html>
