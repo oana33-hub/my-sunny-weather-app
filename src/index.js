@@ -39,21 +39,29 @@ form.addEventListener("submit", search);
 
 
 
-function celsius(event) {
+function displayCelsiusTemperature(event) {
   event.preventDefault();
-  let celsiusTemp = document.querySelector("#temperature");
-  celsiusTemp.innerHTML = "23";
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement=document.querySelector("#temperature");
+  temperatureElement.innerHTML= Math.round(celsiusTemperature);
+  
 }
 
-function fahrenheit(event) {
+function displayFahrenheitTemperature(event) {
   event.preventDefault();
-  let fahrenheitTemp = document.querySelector("#temperature");
-  fahrenheitTemp.innerHTML = "70";
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature =(celsiusTemperature *9)/5+32;
+ let temperatureElement=document.querySelector("#temperature");
+ temperatureElement.innerHTML=Math.round(fahrenheitTemperature);
 }
-let tempCelsius = document.querySelector("#celsius-link");
-tempCelsius.addEventListener("click", celsius);
-let tempFahrenheit = document.querySelector("#fahrenheit-link");
-tempFahrenheit.addEventListener("click", fahrenheit);
+
+let fahrenheitLink= document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click",displayFahrenheitTemperature);
+let celsiusLink=document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click",displayCelsiusTemperature);
+let celsiusTemperature= null;
 
 
 
@@ -62,12 +70,13 @@ tempFahrenheit.addEventListener("click", fahrenheit);
 
 function showTemperature(response) {
   console.log();
+  
   let iconElement=document.querySelector("#icon");
   let city = response.data.name;
   let temperature = Math.round(response.data.main.temp);
   let h1 = document.querySelector("#city");
   let description = document.querySelector("#description");
- 
+ celsiusTemperature=Math.round(response.data.main.temp);
   h1.innerHTML = ` ${temperature}°C in ${city} `;
   description.innerHTML = response.data.weather[0].description;
   document.querySelector("#wind").innerHTML = Math.round(
