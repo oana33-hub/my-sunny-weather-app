@@ -14,6 +14,7 @@
 <body>
 
   <div class="container">
+    <div class="weather-app-wrapper">
     <div class="card-body">
       <form id="search-form">
         <input type="search" placeholder="Search a city" autofocus="on" autocomplete="off" id="city-input"
@@ -31,8 +32,8 @@
         <h4></h4>
       </div>
       <div class="city">
-        <h1>
-          PARIS
+        <h1 id="city">
+          
         </h1>
       </div>
       <div class="date-time">
@@ -49,19 +50,19 @@
           <a href="#" id="celsius-link">°C</a>|
           <a href="#" id="fahrenheit-link">°F</a> </span>
       </h2>
-      <div class="description">
+      <div class="description-weather">
         <p>
           description: <span class="description" id="description"></span>
           </br>
-          wind:<span class="wind" id="wind"></span>km/h
+          wind: <span class="wind" id="wind"></span>km/h
           </br>
           humidity: <span class="humidity" id="humidity"></span> % </p>
       </div>
-      <div class="img">
-        <img src="http://clipart-library.com/img1/798806.png" />
-      </div>
+      <img src="" id="icon" />
+      
+    
       <div class="daily-weather">
-        <h4>Daily Weather</h4>
+        <h4 id="daily-weather">Daily Weather</h4>
         <ul>
           <li>
             MON
@@ -96,6 +97,8 @@
       </div>
     </div>
   </div>
+</div>
+</div>
   <footer>
   <a href="https://github.com/oana33-hub/my-sunny-weather-app"> Open-source code</a> by Oana Elena
 </footer>

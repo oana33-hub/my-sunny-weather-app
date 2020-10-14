@@ -6,6 +6,9 @@ let h3 = document.querySelector("h3");
 
 let date = current.getDate();
 let hours = current.getHours();
+if (hours<10){
+  hours=`0${hours}`;
+}
 let minutes = current.getMinutes();
 if (minutes < 10) {
   minutes = `0${minutes}`;
@@ -59,18 +62,21 @@ tempFahrenheit.addEventListener("click", fahrenheit);
 
 function showTemperature(response) {
   console.log();
+  let iconElement=document.querySelector("#icon");
   let city = response.data.name;
   let temperature = Math.round(response.data.main.temp);
-  let h1 = document.querySelector("h1");
-  h1.innerHTML = ` ${temperature}°C in ${city} `;
+  let h1 = document.querySelector("#city");
   let description = document.querySelector("#description");
+ 
+  h1.innerHTML = ` ${temperature}°C in ${city} `;
   description.innerHTML = response.data.weather[0].description;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-
-
+iconElement.setAttribute("src",`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+iconElement.setAttribute("height","35%");
+iconElement.setAttribute("width","35%");
 }
 
 
